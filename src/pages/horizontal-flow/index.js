@@ -123,6 +123,7 @@ const initialEdges = [
   },
 ];
 
+
 const nodeColor = (node) => {
   switch (node.type) {
     case 'input':

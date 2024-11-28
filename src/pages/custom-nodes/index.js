@@ -24,7 +24,7 @@ const nodeTypes = {
 
 const defaultViewport = { x: 0, y: 0, zoom: 1.5 };
 
-const CustomNodeFlow = () => {
+const StyleNodeFlow = () => {
   const [nodes, setNodes, onNodesChange] = useNodesState([]);
   const [edges, setEdges, onEdgesChange] = useEdgesState([]);
   const [bgColor, setBgColor] = useState(initBgColor);
@@ -152,4 +152,4 @@ const CustomNodeFlow = () => {
   );
 };
 
-export default CustomNodeFlow;
+export default StyleNodeFlow;

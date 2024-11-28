@@ -9,6 +9,23 @@ body {
   width: 100vw;
   height: 100vh;
 }
+
+.react-flow__node.depth-1 {
+  border-color: #f28b82; /* 빨간색 */
+}
+
+.react-flow__node.depth-2 {
+  border-color: #fbbc04; /* 주황색 */
+}
+
+.react-flow__node.depth-3 {
+  border-color: #34a853;
+}
+
+.react-flow__node.depth-4 {
+  border-color: #4285f4; /* 파란색 */
+}
+
  
 .react-flow .react-flow__handle {
   width: 30px;
