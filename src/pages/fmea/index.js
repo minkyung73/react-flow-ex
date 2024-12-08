@@ -4,6 +4,7 @@ import {
   useNodesState,
   useEdgesState,
   addEdge,
+  MiniMap, 
   useReactFlow,
   ReactFlowProvider,
   getIncomers,
@@ -75,6 +76,21 @@ const initialEdges = [
     animated: true,
   },
 ];
+
+const nodeColor = (node) => {
+  switch (node.depth) {
+    case 1:
+      return '#f28b82';
+    case 2:
+      return '#fbbc04';
+    case 3:
+      return '#34a853';
+    case 4:
+      return '#4285f4';
+    default: 
+      return '#000000';
+  }
+};
 
 let id = 1;
 const getId = () => `${id++}`;
@@ -222,6 +238,7 @@ const AddNodeOnEdgeDrop = () => {
         fitViewOptions={{ padding: 2 }}
         nodeOrigin={nodeOrigin}
       >
+        <MiniMap nodeColor={nodeColor} nodeStrokeWidth={3} zoomable pannable />
         <Panel position='topleft'>
           <div>
             <button onClick={onCheckNodes}>
