@@ -235,7 +235,7 @@ const AddNodeOnEdgeDrop = () => {
         onConnectEnd={onConnectEnd}
         nodesDraggable={true}
         fitView
-        fitViewOptions={{ padding: 2 }}
+        // fitViewOptions={{ padding: 2 }}
         nodeOrigin={nodeOrigin}
       >
         <MiniMap nodeColor={nodeColor} nodeStrokeWidth={3} zoomable pannable />

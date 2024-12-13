@@ -6,6 +6,7 @@ import StyleNodeFlow from './pages/custom-nodes';
 import AddNodeOnEdgeDrop from './pages/add-node-on-edge-drop';
 import FMEA from './pages/fmea';
 import CustomNodeFlow from './pages/connection-limit';
+import UpdateNode from './pages/update-nodes';
 
 
 function renderPage(page) {
@@ -16,6 +17,7 @@ function renderPage(page) {
   else if(page === 5) return <AddNodeOnEdgeDrop />
   else if(page === 6) return <FMEA />
   else if(page === 7) return <CustomNodeFlow />
+  else if(page === 8) return <UpdateNode />
 }
 
 function App() {
@@ -31,6 +33,7 @@ function App() {
         <button onClick={() => setPage(5)}>Add Node On Edge Drops</button>
         <button onClick={() => setPage(6)}>FMEA</button>
         <button onClick={() => setPage(7)}>Custom Node Flow</button>
+        <button onClick={() => setPage(8)}>update nodes</button>
       </div>
       <div>
         {renderPage(page)}
