@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { ReactFlow, useNodesState, useEdgesState, Background } from '@xyflow/react';
 
 import '@xyflow/react/dist/style.css';
@@ -91,12 +91,17 @@ const UpdateNode = () => {
     );
   }, [nodeHidden, setNodes, setEdges]);
 
+  const onNodeClick = useCallback((event, selNode) => {
+    console.log(`Node Info:`, selNode);
+  }, []);
+
   return (
     <div className="wrapper" ref={reactFlowWrapper} style={{ display: 'flex', width: "100vw", height: "90vh" }}>
       <div style={{ flex: 1 }}>
         <ReactFlow
           nodes={nodes}
           edges={edges}
+          onNodeClick={onNodeClick}
           onNodesChange={onNodesChange}
           onEdgesChange={onEdgesChange}
           defaultViewport={defaultViewport}
