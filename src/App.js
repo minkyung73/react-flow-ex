@@ -9,6 +9,7 @@ import CustomNodeFlow from "./pages/connection-limit";
 import UpdateNode from "./pages/update-nodes";
 import Master from "./pages/master";
 import CustomNodeClickDemo from "./pages/folder-tree";
+import BasicFlow from "./pages/restrict-axis";
 
 function renderPage(page) {
   if (page === 1) return <HorizontalFlow />;
@@ -21,6 +22,7 @@ function renderPage(page) {
   else if (page === 8) return <UpdateNode />;
   else if (page === 9) return <Master />;
   else if (page === 10) return <CustomNodeClickDemo />;
+  else if (page === 11) return <BasicFlow />;
 }
 
 function App() {
@@ -39,6 +41,7 @@ function App() {
         <button onClick={() => setPage(8)}>update nodes</button>
         <button onClick={() => setPage(9)}>Master</button>
         <button onClick={() => setPage(10)}>Folder</button>
+        <button onClick={() => setPage(11)}>restrict x-axis</button>
       </div>
       <div>{renderPage(page)}</div>
     </div>
