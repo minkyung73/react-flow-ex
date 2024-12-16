@@ -51,6 +51,7 @@ const BasicFlow = () => {
     [setEdges]
   );
 
+  // y축 고정으로 변경 예정
   const onNodesChange = useCallback((changes) => {
     setNodes((nds) => {
       const parsedChanges = changes.map((change) => {
